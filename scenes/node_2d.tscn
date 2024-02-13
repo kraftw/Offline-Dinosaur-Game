@@ -1,3 +1,6 @@
 [gd_scene format=3 uid="uid://yxctoyg3hewu"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Background" type="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+centered = false
