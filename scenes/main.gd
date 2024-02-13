@@ -16,6 +16,7 @@ var difficulty
 const MAX_DIFFICULTY : int = 2
 var score : int
 const SCORE_MODIFIER : int = 10
+var high_score : int
 var speed : float
 const START_SPEED : float = 10.0
 const MAX_SPEED : int = 25
@@ -28,6 +29,7 @@ var last_obs
 func _ready():
 	screen_size = get_window().size
 	ground_height = $Ground.get_node("Sprite2D").texture.get_height()
+	$GameOver.get_node("Button").pressed.connect(new_game)
 	new_game()
 
 func new_game():
@@ -35,7 +37,13 @@ func new_game():
 	score = 0
 	show_score()
 	game_running = false
+	get_tree().paused = false
 	difficulty = 0
+	
+	# reset the obstacles
+	for obs in obstacles:
+		obs.queue_free()
+	obstacles.clear()
 	
 	# reset the nodes
 	$Dino.position = DINO_START_POS
@@ -43,8 +51,9 @@ func new_game():
 	$Camera2D.position = CAM_START_POS
 	$Ground.position = Vector2i(0, 0)
 	
-	# reset hud
+	# reset hud and game over screen
 	$HUD.get_node("StartLabel").show()
+	$GameOver.hide()
 
 func _process(delta):
 	if game_running:
@@ -103,6 +112,7 @@ func generate_obs():
 
 func add_obs(obs, x, y):
 	obs.position = Vector2i(x, y)
+	obs.body_entered.connect(hit_obs)
 	add_child(obs)
 	obstacles.append(obs)
 
@@ -110,10 +120,25 @@ func remove_obs(obs):
 	obs.queue_free()
 	obstacles.erase(obs)
 
+func hit_obs(body):
+	if body.name == "Dino":
+		game_over()
+
 func show_score():
 	$HUD.get_node("ScoreLabel").text = "SCORE: " + str(score / SCORE_MODIFIER)
+
+func check_high_score():
+	if score > high_score:
+		high_score = score
+		$HUD.get_node("HighScoreLabel").text = "HIGH SCORE: " + str(high_score / SCORE_MODIFIER)
 
 func adjust_difficulty():
 	difficulty = score / SPEED_MODIFIER
 	if difficulty > MAX_DIFFICULTY:
 		difficulty = MAX_DIFFICULTY
+
+func game_over():
+	check_high_score()
+	get_tree().paused = true
+	game_running = false
+	$GameOver.show()
