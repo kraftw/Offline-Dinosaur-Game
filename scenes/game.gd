@@ -15,12 +15,12 @@ const CAM_START_POS := Vector2i(960, 540)
 var difficulty
 const MAX_DIFFICULTY : int = 2
 var score : int
-const SCORE_MODIFIER : int = 25
+const SCORE_MODIFIER : int = 50
 @export var high_score : int
 var speed : float
 const START_SPEED : float = 5.0
 const MAX_SPEED : int = 10
-const SPEED_MODIFIER : int = 10000
+const SPEED_MODIFIER : int = 5000
 var screen_size : Vector2i
 var ground_height : int
 var game_running : bool
