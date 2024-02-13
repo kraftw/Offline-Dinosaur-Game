@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkemgaqrtmciv"
-path="res://.godot/imported/jungle tileset.png-25c6f4a79834dc08c490e5f2f1c8d797.ctex"
+uid="uid://evvds180ie4t"
+path="res://.godot/imported/rock.png-f1bf9b25bda1f2c5f4037cd6ddabeac4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/tileset/jungle tileset.png"
-dest_files=["res://.godot/imported/jungle tileset.png-25c6f4a79834dc08c490e5f2f1c8d797.ctex"]
+source_file="res://assets/images/obstacles/rock.png"
+dest_files=["res://.godot/imported/rock.png-f1bf9b25bda1f2c5f4037cd6ddabeac4.ctex"]
 
 [params]
 

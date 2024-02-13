@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drprs37f8n5eg"
-path="res://.godot/imported/shadow_2.png-964219007ee5690ca6bfe05a43ada5c8.ctex"
+uid="uid://v5318shw3jsq"
+path="res://.godot/imported/barrel.png-d92ccc1ec003b5ad8a3ec38cce2ca753.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/character/dino v1.1/misc/shadow_2.png"
-dest_files=["res://.godot/imported/shadow_2.png-964219007ee5690ca6bfe05a43ada5c8.ctex"]
+source_file="res://assets/images/obstacles/barrel.png"
+dest_files=["res://.godot/imported/barrel.png-d92ccc1ec003b5ad8a3ec38cce2ca753.ctex"]
 
 [params]
 

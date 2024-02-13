@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4rtgln3ab3d2"
-path="res://.godot/imported/bg.png-65a0b7ec6b7087da659dcca5c6bedf3a.ctex"
+uid="uid://dtotw1rs3n5dx"
+path="res://.godot/imported/stump.png-e3af4cb322105c72d586d17890d0d62c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/character/dino v1.1/misc/bg.png"
-dest_files=["res://.godot/imported/bg.png-65a0b7ec6b7087da659dcca5c6bedf3a.ctex"]
+source_file="res://assets/images/obstacles/stump.png"
+dest_files=["res://.godot/imported/stump.png-e3af4cb322105c72d586d17890d0d62c.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=24 format=3 uid="uid://b8wc50obq3h7c"]
 
 [ext_resource type="Script" path="res://scenes/dino.gd" id="1_4sgqt"]
-[ext_resource type="Texture2D" uid="uid://ctvoiad5ubh8s" path="res://assets/images/character/dino v1.1/sheets/DinoSprites - mort.png" id="1_laj3q"]
+[ext_resource type="Texture2D" uid="uid://ctvoiad5ubh8s" path="res://assets/images/character/mort.png" id="1_laj3q"]
 [ext_resource type="AudioStream" uid="uid://ddvtnkjxjes4y" path="res://assets/sounds/effects/jump_effect.wav" id="2_x603o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rvypj"]
