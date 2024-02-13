@@ -13,12 +13,15 @@ script = ExtResource("1_l6yov")
 [node name="Background" parent="." instance=ExtResource("1_w4v6p")]
 
 [node name="Ground" parent="." instance=ExtResource("2_sgscc")]
+position = Vector2(0, 1.52588e-05)
+scale = Vector2(1.668, 1.668)
 
 [node name="Dino" parent="." instance=ExtResource("3_b12qq")]
-position = Vector2(105, 488)
+position = Vector2(200, 856)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(576, 324)
+position = Vector2(960, 540)
+scale = Vector2(2, 2)
 
 [node name="HUD" parent="." instance=ExtResource("5_pv0w2")]
 

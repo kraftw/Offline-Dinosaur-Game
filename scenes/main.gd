@@ -7,11 +7,11 @@ var barrel_scene = preload("res://scenes/barrel.tscn")
 var bird_scene = preload("res://scenes/bird.tscn")
 var obstacle_types := [stump_scene, rock_scene, barrel_scene]
 var obstacles : Array
-var bird_heights := [350, 500]
+var bird_heights := [750, 850]
 
 # game variables
-const DINO_START_POS := Vector2i(150, 485)
-const CAM_START_POS := Vector2i(576, 324)
+const DINO_START_POS := Vector2i(200, 856)
+const CAM_START_POS := Vector2i(960, 540)
 var difficulty
 const MAX_DIFFICULTY : int = 2
 var score : int
@@ -98,7 +98,7 @@ func generate_obs():
 			var obs_height = obs.get_node("Sprite2D").texture.get_height()
 			var obs_scale = obs.get_node("Sprite2D").scale
 			var obs_x : int = screen_size.x + score + 1000 + (i * 100)
-			var obs_y : int = screen_size.y - ground_height - (obs_height * obs_scale.y / 2) + 5
+			var obs_y : int = screen_size.y - ground_height - (obs_height * obs_scale.y / 2) - 50
 			last_obs = obs
 			add_obs(obs, obs_x, obs_y)
 		# additionally random chance to spawn a bird
