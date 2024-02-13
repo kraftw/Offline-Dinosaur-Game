@@ -4,3 +4,8 @@
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 centered = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+centered = false
