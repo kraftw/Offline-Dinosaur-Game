@@ -15,7 +15,7 @@ const CAM_START_POS := Vector2i(576, 324)
 var difficulty
 const MAX_DIFFICULTY : int = 2
 var score : int
-const SCORE_MODIFIER : int = 100
+const SCORE_MODIFIER : int = 25
 @export var high_score : int
 var speed : float
 const START_SPEED : float = 5.0
@@ -106,7 +106,7 @@ func generate_obs():
 			if (randi() % 4) == 0:
 				# generate bird obstacles
 				obs = bird_scene.instantiate()
-				var obs_x : int = screen_size.x + score + 200
+				var obs_x : int = screen_size.x + score + 400
 				var obs_y : int = bird_heights[randi() % bird_heights.size()]
 				add_obs(obs, obs_x, obs_y)
 
