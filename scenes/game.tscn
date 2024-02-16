@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://nfd44on5lvbm"]
 
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_w7q2w"]
-[ext_resource type="PackedScene" path="res://scenes/background.tscn" id="2_buv7w"]
-[ext_resource type="PackedScene" path="res://scenes/ground.tscn" id="3_fphfx"]
-[ext_resource type="PackedScene" path="res://scenes/dino.tscn" id="4_lkygl"]
-[ext_resource type="PackedScene" path="res://scenes/hud.tscn" id="5_2iddd"]
-[ext_resource type="PackedScene" path="res://scenes/game_over.tscn" id="6_kyowu"]
+[ext_resource type="PackedScene" uid="uid://yxctoyg3hewu" path="res://scenes/background.tscn" id="2_buv7w"]
+[ext_resource type="PackedScene" uid="uid://cyb3s1y2ndxdt" path="res://scenes/ground.tscn" id="3_fphfx"]
+[ext_resource type="PackedScene" uid="uid://b8wc50obq3h7c" path="res://scenes/dino.tscn" id="4_lkygl"]
+[ext_resource type="PackedScene" uid="uid://br6t52qokm8uk" path="res://scenes/hud.tscn" id="5_2iddd"]
+[ext_resource type="PackedScene" uid="uid://bb6wh33h0kfyr" path="res://scenes/game_over.tscn" id="6_kyowu"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_w7q2w")
