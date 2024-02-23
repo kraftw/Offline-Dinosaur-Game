@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://nfd44on5lvbm"]
+
+[ext_resource type="Script" path="res://game/game.gd" id="1_w7q2w"]
+[ext_resource type="PackedScene" uid="uid://cyb3s1y2ndxdt" path="res://game/environment/ground.tscn" id="3_fphfx"]
+[ext_resource type="PackedScene" uid="uid://b8wc50obq3h7c" path="res://dino/dino.tscn" id="4_lkygl"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_w7q2w")
+
+[node name="Ground" parent="." instance=ExtResource("3_fphfx")]
+position = Vector2(0, 1.52588e-05)
+scale = Vector2(1.668, 1.668)
+
+[node name="Dino" parent="." instance=ExtResource("4_lkygl")]
+position = Vector2(200, 856)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(2, 2)

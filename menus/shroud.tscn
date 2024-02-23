@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://el5w5y6rkxmj"]
+
+[ext_resource type="Texture2D" uid="uid://cqxqvyqgyvp8o" path="res://menus/Shroud.png" id="1_ylkpr"]
+[ext_resource type="FontFile" uid="uid://c7nllfq0lqn7p" path="res://menus/fonts/Pixeloid_Sans_Bold.ttf" id="2_883d0"]
+
+[node name="Shroud" type="CanvasLayer"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(12, 12)
+texture = ExtResource("1_ylkpr")
+
+[node name="Title" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -448.0
+offset_top = 18.0
+offset_right = 450.0
+offset_bottom = 97.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_883d0")
+theme_override_font_sizes/font_size = 64
+text = "Offline Dinosaur Game"
+horizontal_alignment = 1
+vertical_alignment = 1
