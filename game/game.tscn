@@ -1,14 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://nfd44on5lvbm"]
+[gd_scene load_steps=7 format=3 uid="uid://nfd44on5lvbm"]
 
 [ext_resource type="Script" path="res://game/game.gd" id="1_w7q2w"]
-[ext_resource type="PackedScene" uid="uid://el5w5y6rkxmj" path="res://menus/shroud.tscn" id="2_w3nt0"]
 [ext_resource type="PackedScene" uid="uid://cyb3s1y2ndxdt" path="res://game/environment/ground/ground.tscn" id="3_fphfx"]
+[ext_resource type="PackedScene" uid="uid://lyf4a3sklk1o" path="res://guis/hud/hud.tscn" id="4_g4u6j"]
 [ext_resource type="PackedScene" uid="uid://b8wc50obq3h7c" path="res://dino/dino.tscn" id="4_lkygl"]
+[ext_resource type="PackedScene" uid="uid://bpkphu8qj137m" path="res://game/environment/background/bg.tscn" id="4_nbffg"]
+[ext_resource type="PackedScene" uid="uid://lotwuige1aee" path="res://guis/hud/game_over.tscn" id="5_brysg"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_w7q2w")
-
-[node name="Shroud" parent="." instance=ExtResource("2_w3nt0")]
 
 [node name="Ground" parent="." instance=ExtResource("3_fphfx")]
 position = Vector2(0, -344)
@@ -20,3 +20,9 @@ position = Vector2(256, 544)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(960, 540)
 scale = Vector2(2, 2)
+
+[node name="Bg" parent="." instance=ExtResource("4_nbffg")]
+
+[node name="HUD" parent="." instance=ExtResource("4_g4u6j")]
+
+[node name="GameOver" parent="." instance=ExtResource("5_brysg")]

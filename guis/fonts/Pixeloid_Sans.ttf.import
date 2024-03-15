@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://c7nllfq0lqn7p"
-path="res://.godot/imported/Pixeloid_Sans_Bold.ttf-4c168ad5bb6e0cc3d5592858edb018f2.fontdata"
+uid="uid://lmldhrafdk81"
+path="res://.godot/imported/Pixeloid_Sans.ttf-f55a1c3d583fd912892019417fae659c.fontdata"
 
 [deps]
 
-source_file="res://menus/fonts/Pixeloid_Sans_Bold.ttf"
-dest_files=["res://.godot/imported/Pixeloid_Sans_Bold.ttf-4c168ad5bb6e0cc3d5592858edb018f2.fontdata"]
+source_file="res://guis/fonts/Pixeloid_Sans.ttf"
+dest_files=["res://.godot/imported/Pixeloid_Sans.ttf-f55a1c3d583fd912892019417fae659c.fontdata"]
 
 [params]
 

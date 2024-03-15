@@ -5,9 +5,9 @@
 [node name="Rock" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1.5, 1.5)
+scale = Vector2(2, 2)
 texture = ExtResource("1_lw405")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-scale = Vector2(2, 2)
+scale = Vector2(2.5, 2.5)
 polygon = PackedVector2Array(-3.25, -11, 21.5, 11.25, -22.25, 11.25, -15, -11)

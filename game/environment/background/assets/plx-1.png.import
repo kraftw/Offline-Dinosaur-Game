@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqxqvyqgyvp8o"
-path="res://.godot/imported/Shroud.png-7cde792a4b0cba6f4c446d720cd5cf1d.ctex"
+uid="uid://chjjgak0cc3mi"
+path="res://.godot/imported/plx-1.png-010ecc3e6cf4075ae64a8f8e4eb1c191.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menus/Shroud.png"
-dest_files=["res://.godot/imported/Shroud.png-7cde792a4b0cba6f4c446d720cd5cf1d.ctex"]
+source_file="res://game/environment/background/assets/plx-1.png"
+dest_files=["res://.godot/imported/plx-1.png-010ecc3e6cf4075ae64a8f8e4eb1c191.ctex"]
 
 [params]
 

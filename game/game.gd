@@ -29,11 +29,13 @@ var last_obs
 func _ready():
 	screen_size = get_window().size
 	ground_height = $Ground.get_node("Sprite2D").texture.get_height()
+	$GameOver.get_node("Button").pressed.connect(new_game)
 	new_game()
 
 func new_game():
 	# reset the variables
 	score = 0
+	show_score()
 	game_running = false
 	get_tree().paused = false
 	difficulty = 0
@@ -48,6 +50,10 @@ func new_game():
 	$Dino.velocity = Vector2i(0, 0)
 	$Camera2D.position = CAM_START_POS
 	$Ground.position = Vector2i(0, -344)
+	
+	#reset hud and game over screen
+	$HUD.get_node("StartLabel").show()
+	$GameOver.hide()
 
 func _process(delta):
 	if game_running:
@@ -56,21 +62,22 @@ func _process(delta):
 		if speed > MAX_GAME_SPEED:
 			speed = MAX_GAME_SPEED
 		adjust_difficulty()
-			
+		
 		# generate obstacles
 		generate_obs()
-			
+		
 		# move dino and camera
 		$Dino.position.x += speed
 		$Camera2D.position.x += speed
 		
 		# update score
 		score += speed
+		show_score()
 		
 		# update ground position
 		if $Camera2D.position.x - $Ground.position.x > screen_size.x * 1.5:
 			$Ground.position.x += screen_size.x
-			
+		
 		# removes obstacles that have gone off screen
 		for obs in obstacles:
 			if obs.position.x < ($Camera2D.position.x - screen_size.x):
@@ -78,6 +85,7 @@ func _process(delta):
 	else:
 		if Input.is_action_pressed("ui_accept"):
 			game_running = true
+			$HUD.get_node("StartLabel").hide()
 
 func generate_obs():
 	# generate ground obstacles
@@ -116,11 +124,21 @@ func hit_obs(body):
 	if body.name == "Dino":
 		game_over()
 
+func show_score():
+	$HUD.get_node("ScoreLabel").text = "SCORE: " + str(score / SCORE_MODIFIER)
+
+func check_high_score():
+	if score > high_score:
+		high_score = score
+		$HUD.get_node("HighScoreLabel").text = "HIGH SCORE: " + str(high_score / SCORE_MODIFIER)
+
 func adjust_difficulty():
 	difficulty = score / SPEED_MODIFIER
 	if difficulty > MAX_DIFFICULTY:
 		difficulty = MAX_DIFFICULTY
 
 func game_over():
+	check_high_score()
 	get_tree().paused = true
 	game_running = false
+	$GameOver.show()
